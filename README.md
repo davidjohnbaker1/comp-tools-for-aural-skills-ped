@@ -12,6 +12,14 @@ Here you will find the following:
 * Scripts used to generate plots in `scripts`
 * Shiny app?? 
 
+## Writing Guidelines
+
+* Anon in Text 
+* In-line figures
+* Footnotes 
+* 2K-3K Words 
+* 200 Word Abstract 
+
 ## To Do 
 
 * [ ] Create papaja document / rproj 

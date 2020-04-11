@@ -1,0 +1,308 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[english,man,floatsintext]{apa6}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Computational Tools for Aural Skills Pedagogy},
+            pdfkeywords={aural skills, computational musicology, survey methods, assessment},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\makeatother
+\shorttitle{Comp Tools}
+\author{David John Baker\textsuperscript{1}}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} Louisiana State University}
+\authornote{David John Baker completed this work while a Ph.D. student at Louisiana State University. He currently works for Flatiron School in London, England. 
+
+Maybe something else can be added here.
+
+
+Correspondence concerning this article should be addressed to David John Baker, 131 Finsbury Pavement. E-mail: davidjohnbaker1@gmail.com}
+\keywords{aural skills, computational musicology, survey methods, assessment\newline\indent Word count: ~X}
+\usepackage{lineno}
+
+\linenumbers
+\usepackage{csquotes}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=english]{babel}
+\else
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\fi
+
+\title{Computational Tools for Aural Skills Pedagogy}
+
+\date{}
+
+\abstract{
+One or two sentences providing a \textbf{basic introduction} to the field, comprehensible to a scientist in any discipline.
+
+Two to three sentences of \textbf{more detailed background}, comprehensible to scientists in related disciplines.
+
+One sentence clearly stating the \textbf{general problem} being addressed by this particular study.
+
+One sentence summarizing the main result (with the words ``\textbf{here we show}'' or their equivalent).
+
+Two or three sentences explaining what the \textbf{main result} reveals in direct comparison to what was thought to be the case previously, or how the main result adds to previous knowledge.
+
+One or two sentences to put the results into a more \textbf{general context}.
+
+Two or three sentences to provide a \textbf{broader perspective}, readily comprehensible to a scientist in any discipline.
+}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+Which of the melodies in Figure 1 would be more difficult for a student to dictate?
+
+Phrase level
+Within those phrases, appears that there is smooth melodic contour.
+Melody is scalar, lacks any syncopation, and non-diatonic notes seem to just be ornamental embelishments that happen at predictible place in antecdent phrase of parallel period.
+This phrases structure leads itself to basic harmonization for undergraduates.
+
+In contrast, melody B lacks the qualities mentioned above.
+It does not have mirrored phrase structure.
+There are moments of scalar movment, but often after leaps.
+Syncopation makes for unstable.
+And introduction of the non-diatonic tone here probably would give the listener the impression that the F\# might actually be diatonic as there has not been any time for a tonal center to be established.
+
+I would find it probably fair to wager that most aural skills pedagogy would bet that students would be better at dictation melody A rather than melody B.
+And in discussions among aural skills instructor practitoners, the above analysis is probably good enough in terms of providing reasons to answer the question of if one melody is just harder to dictate than the other.
+
+But what if we wanted to know not just a matter of rank/less than greater than?
+What if the question became a matter of degree?
+Imagine a scenario where need to start to get idea for standadization.
+Say more here why.
+How much more difficult is melody B rather than melody B?
+Possible to take an empirical stance on this and say if you really wanted an answer you could have students dicate both, score them, then make some sort of ratio comparison.
+Problem with this is that this answer would be dependent on the parameters of the dictation.
+How good are the students?
+And would this result generalize if done multiple times with both students in their first few dictations compared to those completing their university music training?
+If we were to standadize, this problem exemplifies a common problem that aural skills practitioners deal with.
+It's easy to make relative rank order asssments in our classroom and we rely on our experience and itution in order to do this.
+And while this works on a per institution, even per classroom basis, lack of standisation makes it very difficult to communicate across other educators about agreeing on what we can ask students to do and be fair in our assements since aural skills is so perosnalized.
+Without an objective standard, we lack the language as community for commmond denominator to talk about the degree to which we can expect of students.
+So what is a girl to do?
+
+Historically, thing to do here is to cross the bridge to music cognition to help inform pedagogical practices.
+Thesis here will be to show how tools from computational musicology can help to standarise this problem and the benefits of doing so.
+
+\hypertarget{objectiveness}{%
+\subsection{Objectiveness}\label{objectiveness}}
+
+One of most important things we can do as teachers is make sure that we are teaching students material they don't know and then after than checking for understanding that they learn the materials.
+When we check for understanding, via either formaative of sumaative assemsents, its important to make sure that what we are testing the student on was within their control.
+This ensures a sense of fairness to the student and could add sentence here about how this is important for sense of student morale in the classroom (teaching tech).
+
+As shown from example above, coming to some sort of objective understanding of what can be said for music is very difficult.
+What is considered basic will differ from institution to institution.
+Also whatever standards are set, most people report that students entering music schools are unprepared for whatever they are about to do (Cite).
+Of course the answer here is not to try to assign unviversal scoring rubric to what students should or should not be able to do.
+What is thought of as a noivce really does not mean much given the diversity of insitutions and students that teachers of aural skills will all experience.
+
+As it should be, in the classroom setting, what the level of difficulty is for the classroom is set by the instructor given their expertise.
+This depends on the aims and learning goals of each lesson and the higher level of the course.
+This is OK for doing locally, last thing we need is universal standards in which we remove ability to do custom or bespoke lesson planning.
+The problem is that as a field, without any sort of objective standard, it becomes very hard to communicate common things and preseve institutional knowledge.
+For this to happen, you need some sort of common denominator to act as difficulty rosetta stone.
+
+As stated above, this tipically comes from crossing the bridge to music cognition.
+There is a history of this where this is studied.
+Take a look at Ortmann, taylor pembrook.
+Plus all the stuff with the educaiton people.
+And finally there has been convergance on this from computational musicology with features.
+A feature is way to summarize the contents of melody after it has been digitized into discrete tokens, bascially when you make it a bunch of notes.
+Features that readers from music theory and education might be familiar with are range or the more abstract idea of global key for melody.
+While something like range would be objective, can see that something like key gives room for debate.
+Much of work on features is inspired by computational linguistics.
+For example, also might be familiar with nPVI.
+Cite paper saying its misused.
+But importantly is that it gives objective measure.
+
+As discussed in Baker, can either be static or dynamic.
+Static features are just summary of the whole melody.
+Advantage of this is that have single number to describe.
+For example, range is xyz.
+Also sometthing like interval entropy, which here is layman term, and is predictive of xy`.
+These features have been shown to predict in THESE EXPERIMENTS.
+This gives objective measure.
+
+Negative sides of this is that does not match with phenomonlgocial experience.
+Assumes that melody is almost heard in suspended animation.
+Make joke about key here.
+Note also that here get the problem where if suspended animation, then can have situation arise in Figure 2 where two melodies can have exact same rating on some metrics that assume summary but clearly at not represented at phenomongical level.
+And also some of the features like note density are going ot interact iwth tempo.
+And problematically, as noted in previous literature, all features going to correlate.
+Hard to change one without others.
+There are some ways around this (lasso, ridge) for prediction, or could take PCA approach.
+
+On other side of this, can also look at dynamic models.
+Here each token that was summeraized gets its own value associated with it.
+Clearlest example of this is work from Marcus Pearce and IDyOM model.
+Def of IDyOM here.
+Essentially is able to make some sort of surprise rating based on information content.
+Regardless of buying metaphor of brain as computer and discussion around that, variable can be predictive without invoking any sort of casual or mechanistic claims about cognition.
+For example, show what IDyOM would have put for melody A and B in Figure 2 along with table of select features here.
+Advantages of this lead to thinks like FFH in DJB.
+Disadvantages of this is need larger ML model to get it to run and get values and assume some sort of stochastic, not deterministic like FANTASTIC.
+
+Regardless of static versus dynamic, the idea here is that the features will provide some sort of grounding since they computed with paper trail.
+More imporantly, can now answer questions of degree that were the problem before.
+
+So then this leads to the question, now that we have common language, does it actually map onto what intuitive experience.
+These would not be helpful if they were not predictive of expert intuition.
+Next thing to do here would be to see if these measures will map mathmatically onto generalised cases like comparing the difficulty of dictation between melodies in Figure 1.
+Before going on, need to also note that have been saying difficulty and complexity as same thing.
+Whereas complexity in this context, i define to mean just the objective number from the computational measure, difficulty is going to relate but not be complexity.
+Difficulty here is going to be more empirical resulting from student performance.
+And note that the difficulty is emergent empirical feature that will interact with how the melody is performed.
+For example, any less complex melody would become more difficult if played at either very fast or very slow tempi.
+
+So how is it possible to asses if one is predictive of the other and this actually would be helpful?
+Next I present a survey ran to see if there were some sort of relationships here.
+
+\hypertarget{methods}{%
+\subsection{Methods}\label{methods}}
+
+\begin{itemize}
+\tightlist
+\item
+  Methods go here for this
+\item
+  First look at how features map on global level to just trajectory of book
+\item
+  Not only that, but if you ask people to do the thing I am claiming that it does, agreement
+\item
+  Here is all that data
+\end{itemize}
+
+\hypertarget{discussion}{%
+\subsection{Discussion}\label{discussion}}
+
+\begin{itemize}
+\tightlist
+\item
+  Have shown here that tools from computational musicology provide good model for agreement
+\item
+  Of course not perfect and should not be imposed as global standards
+\item
+  But tacking down this one part will allow more context when start to talk about difficulty in the actual experience
+\item
+  Benefits here are that we can begin to understand the meachanisms of this
+\item
+  If we know it better, become better teachers
+\item
+  And then point of all of this is if we know btter, we help students in the long run.
+\end{itemize}
+
+\hypertarget{data-analysis}{%
+\subsection{Data analysis}\label{data-analysis}}
+
+We used R (Version 3.6.2; R Core Team, 2019) and the R-package \emph{papaja} (Version 0.1.0.9942; Aust \& Barth, 2020) for all our analyses.
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-R-papaja}{}%
+Aust, F., \& Barth, M. (2020). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
+
+\leavevmode\hypertarget{ref-R-base}{}%
+R Core Team. (2019). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
+
+\endgroup
+
+\end{document}
