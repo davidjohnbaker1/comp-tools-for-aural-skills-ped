@@ -16,22 +16,8 @@ affiliation:
 authornote: |
   David John Baker completed this work while a Ph.D. student at Louisiana State University. He currently works for Flatiron School in London, England. 
 
-  Maybe something else can be added here.
-
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  Aural skills practitioners rely on expert intuition for choosing what melodies they should pick for melodic dictation, aural skills has no way to agree on the objective difficulty of melodies. While this lack of objectiveness does not matter for day-to-day of most instructors, relying on their expert intuitions to guide students to sucess, a lack of common language makes it difficult to perserve institutional knowledge of what students can be expected to do. In order to fill this current void, I suggest that aural skills practitioners again cross the bridge to music cognition to help with this. Specifically, I argue that by looking at work of features in computational musicology can provide an empirical, objective framework giving common language to talk about complexity of melodies. I describe how idea of features have been used in computational musicology, then demonstrate how these features map onto already held expert intutions by modeling results from a survey of 40 aural skills instructors of post-secondary education. Given the close modeling of opinion to what the features do, I conclude by showing how using these measures can begin as building block of common language to help understand what can be expected of students across all ability levels. 
   
   <!-- https://tinyurl.com/ybremelq -->
   
@@ -65,63 +51,86 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 ## Introduction
 
-Which of the melodies in Figure 1 would be more difficult for a student to dictate?
+Which melody would be more difficult for a student to dictate, the melody from Figure 1 or Figure 2?
+The melody from Figure 1 loosely follows a parallel period.
+A double eighth note anacrusis begins a melody that rises and falls with the opening contour and rhythmic motive occur again half way through the eight bar phrase.
+The melody is mostly scalar, lacks any sort of syncopation, and the use of a non-diatonic F# appears to just act as an ornamental upper chromatic neighbor the E that it embellishes.
+Diatonic chords could be used to underpin each measure and create a stable, preditible harmonic rhythm.
 
-Phrase level
-Within those phrases, appears that there is smooth melodic contour.
-Melody is scalar, lacks any syncopation, and non-diatonic notes seem to just be ornamental embelishments that happen at predictible place in antecdent phrase of parallel period. 
-This phrases structure leads itself to basic harmonization for undergraduates.
+```{r, out.width="100%", fig.cap="A Musical Puzzle"}
+knitr::include_graphics("../figures/musical_puzzles/musical_puzzle_a.png")
+```
 
-In contrast, melody B lacks the qualities mentioned above. 
-It does not have mirrored phrase structure.
-There are moments of scalar movment, but often after leaps.
-Syncopation makes for unstable.
-And introduction of the non-diatonic tone here probably would give the listener the impression that the F# might actually be diatonic as there has not been any time for a tonal center to be established. 
 
-I would find it probably fair to wager that most aural skills pedagogy would bet that students would be better at dictation melody A rather than melody B. 
-And in discussions among aural skills instructor practitoners, the above analysis is probably good enough in terms of providing reasons to answer the question of if one melody is just harder to dictate than the other. 
+```{r, out.width="100%", fig.cap="B Musical Puzzle"}
+knitr::include_graphics("../figures/musical_puzzles/musical_puzzle_b.png")
+```
 
-But what if we wanted to know not just a matter of rank/less than greater than?
-What if the question became a matter of degree?
-Imagine a scenario where need to start to get idea for standadization.
-Say more here why.
-How much more difficult is melody B rather than melody B?
-Possible to take an empirical stance on this and say if you really wanted an answer you could have students dicate both, score them, then make some sort of ratio comparison.
-Problem with this is that this answer would be dependent on the parameters of the dictation.
-How good are the students?
-And would this result generalize if done multiple times with both students in their first few dictations compared to those completing their university music training?
-If we were to standadize, this problem exemplifies a common problem that aural skills practitioners deal with.
-It's easy to make relative rank order asssments in our classroom and we rely on our experience and itution in order to do this.
-And while this works on a per institution, even per classroom basis, lack of standisation makes it very difficult to communicate across other educators about agreeing on what we can ask students to do and be fair in our assements since aural skills is so perosnalized.
-Without an objective standard, we lack the language as community for commmond denominator to talk about the degree to which we can expect of students. 
-So what is a girl to do?
+In contrast, the melody from Figure 2 lacks many of the qualities shared by the previous melody.
+Figure 2's melody does not have a clear phrase structure, there are moments of scalar movement, but there appear to be many more leaps than anyone would want to dictate with a limited number of hearings. 
+The syncopations both within and across the barlines obfuscate any sense of rhthmic predictibility and the introduction of the non-diatonic tone in this context, that singular F#, would probably give the listener the impression this note might actually be diatonic, as it is introduced before any clear tonal center is established. 
 
-Historically, thing to do here is to cross the bridge to music cognition to help inform pedagogical practices.
-Thesis here will be to show how tools from computational musicology can help to standarise this problem and the benefits of doing so. 
+From this cursory analysis, I believe that I could safely conclude that most aural skills teachers would bet that students would be better at dictating the melody from Figure 1, rather than the melody from Figure 2. 
+And given most discussions among teachers having to decide between which melody to choose, this analysis is more of just externalizing a shared cognition that many would just intuit if they just had to decide to rank these two melodies in terms of complexity. 
+I imagine many conversations like this happen almost daily among teams of teachers deciding which melodies to assign (less stark) weekly for those teaching aural skills. 
 
-## Objectiveness 
+And while choosing which of two, maybe three or four, melodies is is appropriate for students to dictaate (introduce earlier?), in comparison to one another, what happens when this question of ranking relative difficulty were to then become a question of degree: how much more difficult is the melody from Figure 1 different from Figure 2?
 
-One of most important things we can do as teachers is make sure that we are teaching students material they don't know and then after than checking for understanding that they learn the materials.
-When we check for understanding, via either formaative of sumaative assemsents, its important to make sure that what we are testing the student on was within their control.
-This ensures a sense of fairness to the student and could add sentence here about how this is important for sense of student morale in the classroom (teaching tech).
+Outside of picking the right melody for a single melodic dictation and taking a more bird's eye approach, questions of degree are important when it comes to creatinig meaningful, observable learning objectives.
+By the end of a first, or third, or second, or fourth semester of aural skills pedagogy, what should a student be reasonably expected to do?
+Of course this answer will vary widly from institution to institution, as not all school can or should adopt a universal standard from which teachers are expected to attain, but currently there does not exist a common denominator/langauge for determining any sort of objective metric that is able to describe the complexity of melodies that we ask our students to dictate.
 
-As shown from example above, coming to some sort of objective understanding of what can be said for music is very difficult. 
-What is considered basic will differ from institution to institution.
-Also whatever standards are set, most people report that students entering music schools are unprepared for whatever they are about to do (Cite).
-Of course the answer here is not to try to assign unviversal scoring rubric to what students should or should not be able to do. 
-What is thought of as a noivce really does not mean much given the diversity of insitutions and students that teachers of aural skills will all experience. 
+Revisiting the question I just posed, it might be possible to take an empirical stance to the question of how much more difficult the melody from Figure 1 is from the melody from Figure 2 by having a group of students dictate both, score them, and then make some sort of ratio comparison.
+The problem with this approach is that whatever answer is yielded would be largely dependent on the conditions of the dictation: how much experience do the students have who are dictating the melody? Who gets to decide how many times and what tempo the melody is to be played?
+More importantly if this were to be claimed as an empirical metric, if this exact comparision were to be done multiple times, what guarantee that this ratio would be stable?
+And is this amount of effort worth the labor in order to just compare two melodies when we could just compare raw scores (rewrite this section so talking about raw scores and same problems).
 
-As it should be, in the classroom setting, what the level of difficulty is for the classroom is set by the instructor given their expertise. 
-This depends on the aims and learning goals of each lesson and the higher level of the course. 
-This is OK for doing locally, last thing we need is universal standards in which we remove ability to do custom or bespoke lesson planning. 
-The problem is that as a field, without any sort of objective standard, it becomes very hard to communicate common things and preseve institutional knowledge.
-For this to happen, you need some sort of common denominator to act as difficulty rosetta stone.
+* As a proxy, we tend to use number in the book but that would put cart before horse.
 
-As stated above, this tipically comes from crossing the bridge to music cognition.
-There is a history of this where this is studied.
-Take a look at Ortmann, taylor pembrook.
-Plus all the stuff with the educaiton people.
-And finally there has been convergance on this from computational musicology with features.
+- write as if single THEN talk about ratio
+
+The above scenario exemplifies a situation that aural skills instructors regularly face.
+Individually, we find it easy to create relative rankings of the difficulty of our melodies for our classroom use and justly rely on our experience and intuition to pick the right melodies so that we can reach the learning objectives we set in the classroom.
+While this method works well on a per institution, per classroom, per instructor basis, this lack of any sort of standardization makes it difficult to communicate with other educators in order to pool resources about what any student should be expected to do. 
+Without an objective standard for discussing the complexity of melodies, we lack the language as community for commmond denominator to talk about the degree to which we can expect of students and push forward institutional knowledge. 
+
+Assuming that having a more objective way to discuss this is desirable, where do we then go in order to get around this problem of subjectivity in grading that is dependent on students?
+We need to cross the bridge to music cognition in order to help inform pedagogical practices.
+Specifically, my thesis here will be to show how tools from the field of music cognition, specifically tools from computational musicology, can help in giving aural skills pedagoges a common, objective tool in help in the disucssion of what can be reasonably expected of our students and the benefits of doing so. 
+
+## Cognition, Computation, Objective
+
+Almost by definition of teaching learning, one of the most important tasks we face as teachers it to ensure that we teach our students novel material that they were unaware of previously, then check for understanding in order to facilitate their learning.
+When we check for understanding, either via formative or summative assements, it is important to ensure that what we are testing the student represents an ability that was within their control (could have been reasnoably expected).
+Assessing students on what can be reasonably expected of them creates a situation where they percieve fairness and can act as in in/external motivator (CITE) morale.
+
+As demonstrate in the narrative obove, reaching an objective understanding of what consituties complexity for music, in this case melodic dicatation, is difficult. 
+What is considered difficult will vary from institution to institution, thus rending terminology like "novice", "first-semester", or "advanced" to be relatively useless.
+Even with any sort of standards, many reserachers investigating musical ability report that students entering music schools are unprepared (CITE) to whatever standards.
+Sentence here about fast changing landscape and de-platforming WEIRD.
+
+Though now knowing that relative langauge is not helpful if want to talk across institutions, how do we find a way to move forward without makign it seem like we are trying to do a universal objective?
+Is it possible to have some sort of rosetta stone to help in this dicussion in order to help preserve institutional knowledge?
+
+As alluded to above, when faced with difficulties in breaking down complexities associate with aural skills, the field benefits from fruitful relationship with bridge to music cognition.
+Cite all bridge literature and work of karpinski.
+Beyond just aural skills, questions here of melodic complexity have long history.
+
+One of the first empirical studies on music and memory was ortmann who looked at determinants.
+This line of research was carried on with Pembrook.
+Also look at work of Taylor and Pembrook.
+Most important here, they found xyz.
+And also note problem to be discussed below of collinarity.
+
+Further, working in this area of doign empiriical work in this area is an active topic within music education and theory.
+Here is where I would add all the education literature and what htye found. 
+Also baker and english dissertation and such. 
+
+Though while there are people looking at determinants and also those doing research investigating different techniques for effective strategies (buonviri), it's hard to connect the two literatures as what ortman would call determinants, or what are now called features, are not catalouged extensively. 
+In order to this, need to turn to work in last decade from computational musicology explicitly looking at musical features
+
+### Features
+
 A feature is way to summarize the contents of melody after it has been digitized into discrete tokens, bascially when you make it a bunch of notes.
 Features that readers from music theory and education might be familiar with are range or the more abstract idea of global key for melody. 
 While something like range would be objective, can see that something like key gives room for debate. 
@@ -129,8 +138,13 @@ Much of work on features is inspired by computational linguistics.
 For example, also might be familiar with nPVI.
 Cite paper saying its misused.
 But importantly is that it gives objective measure.
-
 As discussed in Baker, can either be static or dynamic.
+Here going to talk about static, dynamic, and also mention mathmatical? 
+
+
+
+Most complete toolbox of diverse features is that of Fantastic and Daniel.
+Mostly used in questions of musical memory, basically exactly what aural skilsl are interested in local period, FANTASTIC has been predictive of XYZ. 
 Static features are just summary of the whole melody.
 Advantage of this is that have single number to describe.
 For example, range is xyz.
@@ -170,16 +184,130 @@ Difficulty here is going to be more empirical resulting from student performance
 And note that the difficulty is emergent empirical feature that will interact with how the melody is performed.
 For example, any less complex melody would become more difficult if played at either very fast or very slow tempi. 
 
+
+
 So how is it possible to asses if one is predictive of the other and this actually would be helpful?
 Next I present a survey ran to see if there were some sort of relationships here. 
+In fact, aural skills pedagogues tend to agree for the most part on questions of difficulty of dictation.
+To demonstrate this, I surveyed 40 aural skills pedagogues who all have taught aural skills at the post-secondary  level.
+
+In this survey, participants were asked the questions presented in Table XXX and Table XXX using a sample of 20 melodies found in the a commonly used sight-singing textbook CITE.
 
 
 ## Methods
 
-* Methods go here for this
-* First look at how features map on global level to just trajectory of book 
-* Not only that, but if you ask people to do the thing I am claiming that it does, agreement
-* Here is all that data 
+To select the melodies used in this survey, I randomly sampled 30 melodies from a corpus of melodies (N = 481) from a subset of the Fifth Edition of the Berkowitz _A New Approach to Sight Singing_ [@berkowitzNewApproachSight2011] in order to ensure a representative sampling of melodies that might be used in a pedagogical setting.
+After piloting the randomly sampled melodies on a colleague, I again randomly sampled half of this sub-set and then added in five more melodies that were not in the new set from earlier sections of the book in order to be more representative of materials students might find in the first two semesters of their aural skills pedagogy. 
+I ran the survey from January 31st of 2019 until March 7th, 2019.
+The survey comprised of two sets of questions.
+
+Six questions asked about the teaching background of respondents and these questions can be found in Table \@ref(tab:surveyQuestions1).
+These questions were followed by asking participants to make five ratings over the 20 different melodies.
+The five questions can be found in \@ref(tab:surveyQuestions2). 
+To encourage participation, two $30 cash prizes were offered to two participants. 
+The survey had questions that were specifically designed to gauge their appropriateness for use in a melodic dictation context.
+Participants were recruited exclusively online, and all provided consent to partaking in the data collection as approved by the Louisiana State University Institutional Review Board. 
+
+The table below contains the questions used in the demographic questionnaire.
+Examples were given following each questions and can be found on the survey link. 
+
+```{r surveyQuestions1, echo=FALSE,fig.align='center', out.width="100%"}
+`Demographic Questions` <- c("What is your age, in years?", 
+                             "What is your educational status?", 
+                             "How many years have you been teaching Aural Skills at the University level?",
+                             "Which type of syllable system do you prefer to use?", 
+                             "On which instrument have you gained the most amount of professional training?",
+                             "What is the title of the last degree you received?",
+                             "At what institution are you currently teaching?")
+
+DT_survey1 <- data.frame(`Demographic Questions`)
+
+knitr::kable(
+DT_survey1, booktabs = TRUE, caption =  "Survey Questions", col.names = "Demographic Questions", longtable = TRUE, linesep = ""
+  )
+
+```
+
+The table below contains the questions regarding the ratings of the melodies. 
+Participants either responded using ordinal categories or moved a slider that sat atop a 100 point scale.
+
+```{r surveyQuestions2, echo=FALSE,fig.align='center', out.width="100%"}
+library(magrittr)
+library(kableExtra)
+`Item Questions` <- c("During which semester of Aural Skills would you think it is appropriate to give this melody as a melodic dictation?",
+"How many times do you think this melody should be played in a melodic dictation"," considering the difficulty you noted in your previous question?","Assume a reasonable tempo choice from 70-100BPM.",
+"Please rate how difficult you believe this melody to be for the average second-year  undergraduate student at your institution.","The far left should indicate 'Extremely Easy' and the far right should indicate 'Extremely Difficult'.",
+"Please rate this melody's adherence to the melodic grammar of the Common Practice  Period.","The far left should indicate 'Not Well Formed' and the far right should indicate 'Very Well Formed'.",
+"Is this melody familiar to you?")
+DT_survey2 <- data.frame(`Item Questions`)
+knitr::kable(
+DT_survey2, booktabs = TRUE, caption = "Item Questions",col.names = "Item Questions", linesep = "") %>%
+  kable_styling(latex_options = c("scale_down"))
+```
+
+
+Of the respondents, the average amount of years teaching aural skills was 8.76 years ($SD = 7.60, R: 21-29$).
+I plotted the breakdown of the respondent's age and educational status below in Figure XXX.
+Of the 40 respondents, all reported used some sort of movable system other than 2 who used a fixed system.
+The sample represented over 30 different institutions.
+Overall, the sample reflects a wide range of experience of teaching aural skills. 
+The sample contains both younger and older individuals, as well as a range of experience.
+In the Figures XXX through  below, I list the 20 melodies sampled.
+
+* Melody Table???
+
+## Spare Text
+
+
+### Agreeing on Difficulty 
+
+In order to assess the degree to which pedagogues agreed on a melody for melodic dictation, I first plotted the mean ratings for each melody across the entire sample along with their standard error of the means in  Figure \@ref(fig:diffplot).
+The $x$ axis uses the rank of the melodies, not their index position in the Berkowitz textbook.
+I chose to use this rank order metric as the number of a melody in a textbook is presumed to be best conceptualized as an ordinal variable.
+For example, it would be correct to assume that Melody 200 is more difficult than melody 2, but not by a factor of 100.
+
+# ```{r diffplot, echo=FALSE, fig.cap="Difficulty Ratings from Survey",fig.align='center', out.width="100%"}
+# knitr::include_graphics("img/difficulty_plot.png")
+# ```
+
+From Figure \@ref(fig:diffplot), there is an increasing linear trend from ratings of melodies being less difficult to more difficult across the sample.
+Using an intraclass coefficient calculation of agreement using a two-way model (both melodies and raters treated as random effects), the sample reflects an interclass correlation coefficient of .79.
+According to @kooGuidelineSelectingReporting2016, this reflects a good degree of agreement between raters. 
+This trend across the sample appears in the opposite direction when plotting the mean values to the fourth question in Figure \@ref(fig:grammarplot) from the survey reflecting the melody's adherence to the melodic grammar of the Common Practice period. 
+
+# ```{r grammarplot, echo=FALSE, fig.cap="Grammar Ratings from Survey",fig.align='center', out.width="100%"}
+# knitr::include_graphics("img/grammar_plot.png")
+# ```
+
+While similar trends appear here, yet in the opposite direction as expected, there is a clear breaking of linear trend in the far right potion of the graph that shows melodies that were sampled from the chapter of the corpus that contains atonal melodies.
+Using an intraclass coefficient calculation of agreement using a two-way model, with melodies and raters treated as random effects, the sample reflects an interclass coefficient of .65, which according to @kooGuidelineSelectingReporting2016 indicates a moderate degree of agreement among raters.
+This lower agreement rating is most likely due to the subjectiveness of this question.
+In their free text responses, many participants expressed difficulty in surmising what this meant.
+
+The trends from Figure \@ref(fig:diffplot) and Figure \@ref(fig:grammarplot) occur in the opposite direction.
+As the index or rank of the melody increases, so does the difficulty for the rating as would be expected.
+As the index or rank of the melody increases, its adherence to subjective ratings of melodic grammar of the Common Practice period decreases.
+Taken together, I ran a correlation on every one of the twenty melodies between a single rater's judged difficulty and its judged adherence to tonal expectations of the common practice era.
+The correlations for all 20 melodies are plotted here in Figure \@ref(fig:gramcor).
+From this chart, we see this trend is not uniform across all melodies.
+
+# ```{r gramcor, echo=FALSE, fig.cap="Correlation Between Difficulty and Subjective Ratings of Tonal Grammar",fig.align='center', out.width="100%"}
+# knitr::include_graphics("img/grammar_difficulty_correlation_plot.png")
+# ```
+
+Overall, the sample exhibited an acceptable degree of inter-rater reliability as measured by the interclass correlation coefficient.
+Plotting the respondent's answers across the textbook that melodies were taken from, with the book progressing from less to more difficult, it does appear that aural skills pedagogues tend to agree on how difficult a melody is when used in a dictation setting. 
+
+Central to my argument, there appears to a linear trend of difficulty across the sample based on the melodies rank in the sample.
+In fact, although I presented the data above as ordinal using rank in the textbook, when I ran a mixed-effects linear regression predicting melody difficulty with both rank order as a variable as well as the actual index number of the melody from the Berkowitz, the index model significantly outperforms the rank order model.
+Using the lme4 package [@batesFittingLinearMixedEffects2015], I fit two linear mixed effects models predicting difficulty of melody with subject and item both as random effects in the model, with the only difference in models being a melody rank or melody index.
+When comparing models, the index model (BIC = 6706.3) provided a better fit to the data ($\chi^2$=5.38, $p<.05$) than the rank model (BIC = 6711.7).
+
+Taken together, both anecdotal and empirical evidence for this survey suggest that aural skills pedagogues tend to agree on how difficult a melody is for use in an aural skills setting.
+This sense of difficulty or complexity tracks as the book progresses, but to attribute the cause of a melody being difficult as its position in the book would be putting the cart before the horse. 
+Having now formally established this almost intuitive notion, the remaining portion of this chapter investigates how computationally derived tools can be used to model these commonly held intuitions. 
+In order to provide a sense of validity to the measure, I carry forward ratings from the survey reported and use the expert answers as the ground truth for the the resulting models.
+
 
 ## Discussion 
 

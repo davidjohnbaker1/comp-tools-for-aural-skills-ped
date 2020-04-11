@@ -22,8 +22,10 @@ Here you will find the following:
 
 ## To Do 
 
-* [ ] Create papaja document / rproj 
-* [ ] Sketch outline of paper  
+* [ ] Clean Edit Intro Up to FEATURES 
+* [ ] Clean Imported Text
+* [X] Create papaja document / rproj 
+* [X] Sketch outline of paper  
 * [ ] Import data used in MMD chapter  
 * [ ] Import scripts used in MMD chapter  
 * [ ] Re-create paths used for this repo, not mmd 
