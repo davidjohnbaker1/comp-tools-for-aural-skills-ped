@@ -53,8 +53,8 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 Which melody would be more difficult for a student to dictate, the melody from Figure 1 or Figure 2?
 The melody from Figure 1 loosely follows a parallel period.
-A double eighth note anacrusis begins a melody that rises and falls with the opening contour and rhythmic motive occur again half way through the eight bar phrase.
-The melody is mostly scalar, lacks any sort of syncopation, and the use of a non-diatonic F# appears to just act as an ornamental upper chromatic neighbor the E that it embellishes.
+A double eighth note anacrusis begins the melody which rises and falls in a largely unsurprising fashion and reappears again half-way through the phrase.
+The melody is mostly scalar, lacks any sort of syncopation, and the use of a non-diatonic F# acts as an ornamental upper chromatic neighbor to the E that it embellishes.
 Diatonic chords could be used to underpin each measure and create a stable, preditible harmonic rhythm.
 
 ```{r, out.width="100%", fig.cap="A Musical Puzzle"}
@@ -66,37 +66,39 @@ knitr::include_graphics("../figures/musical_puzzles/musical_puzzle_a.png")
 knitr::include_graphics("../figures/musical_puzzles/musical_puzzle_b.png")
 ```
 
-In contrast, the melody from Figure 2 lacks many of the qualities shared by the previous melody.
-Figure 2's melody does not have a clear phrase structure, there are moments of scalar movement, but there appear to be many more leaps than anyone would want to dictate with a limited number of hearings. 
-The syncopations both within and across the barlines obfuscate any sense of rhthmic predictibility and the introduction of the non-diatonic tone in this context, that singular F#, would probably give the listener the impression this note might actually be diatonic, as it is introduced before any clear tonal center is established. 
+In contrast, the melody from Figure 2 lacks many of the qualities listed above.
+Figure 2's melody does not have a clear phrase structure, there are moments of scalar movement, but there appear to be many more leaps than anyone would want to dictate with a limited number of hearings. The syncopations both within and across the barlines obfuscate any sense of rhythmic predictibility and the introduction of the non-diatonic tone in this context-- that singular F#-- would probably give the listener the impression this note might actually be diatonic, as it is introduced before any clear tonal center is established.
 
-From this cursory analysis, I believe that I could safely conclude that most aural skills teachers would bet that students would be better at dictating the melody from Figure 1, rather than the melody from Figure 2. 
-And given most discussions among teachers having to decide between which melody to choose, this analysis is more of just externalizing a shared cognition that many would just intuit if they just had to decide to rank these two melodies in terms of complexity. 
-I imagine many conversations like this happen almost daily among teams of teachers deciding which melodies to assign (less stark) weekly for those teaching aural skills. 
+From this cursory analysis, I would assume that most aural skills students would be better at dictating the melody from Figure 1, rather than the melody from Figure 2; I think their teachers would also agree.
+The answer to the opening question might have been more or less immediate for most readers of this journal and the above analysis was more just a practice in externalizing the cognition that many would  intuit if forced to rank these two melodies in terms of complexity.
 
-And while choosing which of two, maybe three or four, melodies is is appropriate for students to dictaate (introduce earlier?), in comparison to one another, what happens when this question of ranking relative difficulty were to then become a question of degree: how much more difficult is the melody from Figure 1 different from Figure 2?
+But what happens when this question of ranking relative difficulty were to be slightly modified?
+Instead of asking a question of rank, what if it was a question of degree: how much more difficult is the melody from Figure 1 than from Figure 2?
+While the answer to this question might not be immediatly useful in the day-to-day activities of aural skills instructors choosing which melodies to play to their class, being able to undestand the extent that melodies are difficult for dictation is important since it will allow instructors to be able to give their students specific, measurable, achiveable and relevant learning objectives in the case of melodic dictation.
 
-Outside of picking the right melody for a single melodic dictation and taking a more bird's eye approach, questions of degree are important when it comes to creatinig meaningful, observable learning objectives.
-By the end of a first, or third, or second, or fourth semester of aural skills pedagogy, what should a student be reasonably expected to do?
-Of course this answer will vary widly from institution to institution, as not all school can or should adopt a universal standard from which teachers are expected to attain, but currently there does not exist a common denominator/langauge for determining any sort of objective metric that is able to describe the complexity of melodies that we ask our students to dictate.
+This question becomes of paramount importance when viewing the trajectory of a student's progress as they learn aural skills, in this case, melodic dictation. 
+What should a student a student be reasonably expected to do by the end of their first, third, second, or fifth semester of aural skills pedagogy? 
+Of course this answer will vary widely from institution to institution, as not all schools can or should adopt a universal standard, but this current lack of metric to describe difficulty further makes it near impossible to compare between institutions and build on the field's collective knowledge of what constitutes a difficult melodic dictation. 
 
-Revisiting the question I just posed, it might be possible to take an empirical stance to the question of how much more difficult the melody from Figure 1 is from the melody from Figure 2 by having a group of students dictate both, score them, and then make some sort of ratio comparison.
-The problem with this approach is that whatever answer is yielded would be largely dependent on the conditions of the dictation: how much experience do the students have who are dictating the melody? Who gets to decide how many times and what tempo the melody is to be played?
-More importantly if this were to be claimed as an empirical metric, if this exact comparision were to be done multiple times, what guarantee that this ratio would be stable?
-And is this amount of effort worth the labor in order to just compare two melodies when we could just compare raw scores (rewrite this section so talking about raw scores and same problems).
+Returning to the question of the extent that the melody from Figure 2 is more difficult to dictate than the melody from Figure 1, it might be possible to take an empirical stance to this question and answer it by having a group of students dictate both, score them, and then make some sort of ratio comparison.
+Maybe this same group of students could dictate many different melodies and the scores from each could be treated as a baseline prior from which many ratios could be constructed.
 
-* As a proxy, we tend to use number in the book but that would put cart before horse.
+The problem with this approach is that the answer yielded would be largely dependent on the conditions of the dictation: how much experience do the students have who are dictating the melody? Who gets to decide how many times and what tempo the melody is to be played?
+More importantly, if this were to be claimed as an empirical metric, if this exact comparision were to be done multiple times, what guarantee that this ratio would be stable?
 
-- write as if single THEN talk about ratio
+This scenario of trying to decide what melodies would be suitable for students exemplifies what aural skills instructors regularly face.
+Individually, instructors might it find easy to rank the difficulty of melodies for our classroom using our experience and intuition for our individual learning objectives. 
+While this works well on a per institution, per classroom, per instructor basis, this method lacks any sort of standardization and consequently makes it difficult to communicate with other educators in order to pool resources about what any students can be expected to do. 
+Without an objective standard for discussing the complexity of melodies, we lack the language as community for commmond denominator to talk about the degree to which we can expect of students and push forward institutional knowledge.
 
-The above scenario exemplifies a situation that aural skills instructors regularly face.
-Individually, we find it easy to create relative rankings of the difficulty of our melodies for our classroom use and justly rely on our experience and intuition to pick the right melodies so that we can reach the learning objectives we set in the classroom.
-While this method works well on a per institution, per classroom, per instructor basis, this lack of any sort of standardization makes it difficult to communicate with other educators in order to pool resources about what any student should be expected to do. 
-Without an objective standard for discussing the complexity of melodies, we lack the language as community for commmond denominator to talk about the degree to which we can expect of students and push forward institutional knowledge. 
+But where does can this measure of difficulty come from?
+As a proxy, aural skills instructors often rely on the index melody from an aural skills textbook as a proxy for difficulty.
+Presumably Melody 1 is easier to dictate than melody 100, but maybe not by a factor of 100.
+But this would be putting the cart before the horse.
 
-Assuming that having a more objective way to discuss this is desirable, where do we then go in order to get around this problem of subjectivity in grading that is dependent on students?
-We need to cross the bridge to music cognition in order to help inform pedagogical practices.
-Specifically, my thesis here will be to show how tools from the field of music cognition, specifically tools from computational musicology, can help in giving aural skills pedagoges a common, objective tool in help in the disucssion of what can be reasonably expected of our students and the benefits of doing so. 
+Assuming that having a more objective way to discuss difficulty is desirable, where do we then go in order to get around this problem of subjectivity in grading that is dependent on student and institution?
+At junctures such as these, we need to cross the bridge to music cognition in order to help inform pedagogical practices CITE.
+In this article, I show how tools from the field of music cognition, specifically tools from computational musicology, can help in giving aural skills pedagoges a common, objective tool in help in the disucssion of what can be reasonably expected of our students and the benefits of doing so. 
 
 ## Cognition, Computation, Objective
 
