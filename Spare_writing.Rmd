@@ -2,7 +2,9 @@
 title: "Spare Writing"
 author: "David John Baker"
 date: "11/04/2020"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ## Modeling Complexity
